@@ -1,27 +1,31 @@
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Card from 'react-bootstrap/Card';
+import React, { useState } from 'react'
+import { Col, Row } from 'react-bootstrap'
+import SingleBook from './SingleBook'
+import Welcome from './Welcome';
 
 export default function AllTheBooks(props) {
-  return (
+  const  [selected, setSelected] = useState(false);
 
-    <>    
-      <Container>
-        <Row>
-          {props.books.map((book) => {
-            return (
-            <Col>
-              <Card style={{ width: "17rem", height: "530px" }} className="mb-5">
-                <Card.Img variant="top" src={book.img} style={{height:"400px"}} />
-                <Card.Body>
-                  <Card.Title>{book.title}</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>);
-          })}
+  return (
+    <>
+    <Row>
+      <Col>
+      <Welcome />
+      </Col>
+    </Row>
+    <Row>
+      <Col md={12}>
+        <Row> {props.books
+              .filter(book => book.title.toLowerCase().includes(props.searchQuery))
+              .map(book => <SingleBook 
+                                key={book.asin} 
+                                book={book}
+                                selected = {selected}
+                                setSelected = {setSelected}
+                                 />)} 
         </Row>
-      </Container>
+      </Col>
+    </Row>
     </>
-  );
+  )
 }

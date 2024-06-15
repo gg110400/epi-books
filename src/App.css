@@ -1,3 +1,72 @@
 #nav-dropdown-dark-example {
     color:white
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.custom-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.custom-textarea {
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  resize: none;
+  height: 100px;
+}
+
+.custom-select {
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  padding: 5px;
+}
+
+.custom-button {
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.comment-area {
+  border-radius: 10px;
+}
+
+.custom-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.custom-spinner {
+  color: #007bff;
+}
+
+.custom-alert .alert-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.custom-comment {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-button2 {
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+
