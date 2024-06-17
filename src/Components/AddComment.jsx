@@ -26,7 +26,7 @@ export default function AddComment({ elementId, setAdd, add }) {
 
   const sendComment = async () => {
     try {
-      const response = await fetch("https://striveschool-api.herokuapp.com/api/comments/", {
+      const response = await fetch("https://striveschool-api.herokuapp.com/api/comments/" + elementId , {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ export default function AddComment({ elementId, setAdd, add }) {
 
   return (
     <>
-      <Form.Group className="mb-3 mt-5" controlId="formBasicEmail">
+      <Form.Group className="mb-3 mt-2" controlId="formBasicEmail" data-testid='recensione'>
         <h5 className="mb-2 custom-font">La tua recensione</h5>
         <Form.Control
           as="textarea"
@@ -67,7 +67,7 @@ export default function AddComment({ elementId, setAdd, add }) {
           Dicci subito che cosa ne pensi!
         </Form.Text>
       </Form.Group>
-      <Form.Group className="mt-4">
+      <Form.Group className="mt-4" data-testid='valutazione'>
         <h5 className="mb-2 custom-font">Valuta questo libro</h5>
         <Form.Select aria-label="Default select example" value={commentData.rate} onChange={setRateHandler} className="custom-select">
           <option value="0">Inserisci il numero di stelle</option>
@@ -78,7 +78,7 @@ export default function AddComment({ elementId, setAdd, add }) {
           <option value="5">5</option>
         </Form.Select>
       </Form.Group>
-      <Form.Group className="mt-3 mb-5 text-center">
+      <Form.Group className="mt-3 mb-3 text-center" data-testid='bottone-aggiungi'>
         <Button variant="warning" onClick={sendComment} className="custom-button">
           Aggiungi commento
         </Button>

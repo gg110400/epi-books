@@ -47,12 +47,12 @@ export default function CommentArea({ asin }) {
         </Spinner>
       )}
       {hasError && (
-        <Alert variant="danger" className="mt-3 custom-alert">
+        <Alert variant="danger" className="mt-2 custom-alert">
           <Alert.Heading>Errore di caricamento...</Alert.Heading>
           <p>{errorMessage}</p>
         </Alert>
       )}
-      {comments && comments.length > 0 && <h5 className="mt-3 custom-font">Tutte le recensioni:</h5>}
+      {comments && comments.length > 0 && <h5 className="mt-2 custom-font">Tutte le recensioni:</h5>}
       <CommentList comments={comments} setAdd={setAdd} add={add}></CommentList>
       <AddComment elementId={asin} setAdd={setAdd} add={add}></AddComment>
     </Card>

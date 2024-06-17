@@ -8,11 +8,12 @@ export default function SingleBook({ book, selected, setSelected }) {
   const navigate = useNavigate();
 
   return (
-    <Col className="d-flex align-items-stretch my-3">
+    <Col className="d-flex align-items-stretch my-3" data-testid='card' role="card-column">
       <Card 
+        data-testid='libro'
         bg={themeCtx} 
         data-bs-theme={themeCtx} 
-        className="flex-grow-1" 
+        className="flex-grow-1 card" 
         style={{ border: selected === book.asin ? '2px solid red' : 'none', minWidth: '18rem' }} 
         onClick={() => setSelected(book.asin)}
       >

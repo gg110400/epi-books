@@ -20,7 +20,7 @@ export default function SingleComment({ comment, setAdd, add }) {
   };
 
   return (
-    <ListGroup.Item key={comment._id} className="custom-comment">
+    <ListGroup.Item key={comment._id} className="custom-comment single-comment" data-testid='commento'>
       {comment.comment}
       <Button
         variant="danger"
